@@ -35,8 +35,8 @@ def write_file(file_path, text):
 
 
 def main():
-    input_file_path = r'C:\Users\ktmth\source\repos\codinghaezo\combine_project\combine_project\reminders.txt'  # 입력 파일 위치
-    output_file_path = r'C:\Users\ktmth\source\repos\codinghaezo\combine_project\combine_project\summary.txt'  # 출력 파일 위치 (위와 동일)
+    input_file_path = r'C:\Users\ktmth\source\repos\opensourceBasic\combine_project\summary.txt'  # 입력 파일 위치
+    output_file_path = r'C:\Users\ktmth\source\repos\opensourceBasic\combine_project\summary.txt'  # 출력 파일 위치 (위와 동일)
 
     text = read_file(input_file_path)
     summary = summarize_text(text)

@@ -109,7 +109,7 @@ if __name__ == '__main__':
     service = get_calendar_service()
 
     # 텍스트 파일에서 리마인더 읽기
-    file_path = r"C:\Users\ktmth\source\repos\codinghaezo\combine_project\combine_project\reminders.txt"
+    file_path = r"C:\Users\ktmth\source\repos\opensourceBasic\combine_project\reminders.txt"
     reminders = read_reminders(file_path)
 
     # 구글 캘린더에서 기존 리마인더 가져오기
