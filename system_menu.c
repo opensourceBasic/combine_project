@@ -38,13 +38,26 @@ void Display_ShowMenu(Display* display)
     printf("1. 고객관리\n");
     printf("2. 마일리지 관리\n");
     printf("3. 서비스 히스토리\n");
-    // printf("4. 일정관리\n");
+    //printf("4. 일정관리\n");
 
     Display_SetCursorPosition(0, 6);
     printf("---------오늘의 일정----------\n");
 
-    Display_SetCursorPosition(0, 7);
-    // 오늘의 일정 부분 출력
+    // summary.txt 파일 읽어서 출력
+    FILE* file = fopen("summary.txt", "r");
+    if (file == NULL) {
+        Display_SetCursorPosition(0, 7);
+        printf("파일을 열 수 없습니다.\n");
+    }
+    else {
+        char line[256];
+        int y = 7;
+        while (fgets(line, sizeof(line), file)) {
+            Display_SetCursorPosition(0, y++);
+            printf("%s", line);
+        }
+        fclose(file);
+    }
 
     char selection = 0;
     while (1)
